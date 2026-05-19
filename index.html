@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shi Ding | PhD Researcher at Georgia Institute of Technology</title>
+
+  <title>Shi Ding | Human-AI Interaction Researcher</title>
 
   <style>
     body {
@@ -11,114 +12,365 @@
       margin: 0;
       background-color: #ffffff;
       color: #222;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
     .container {
-      max-width: 680px;
-      margin: 80px auto;
-      padding: 0 20px;
+      max-width: 860px;
+      margin: 70px auto;
+      padding: 0 24px;
     }
 
-    img {
-      width: 120px;
-      height: 120px;
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 28px;
-      margin-bottom: 5px;
-      font-weight: 600;
+    .hero-text h1 {
+      font-size: 34px;
+      margin: 0 0 8px 0;
+      font-weight: 650;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 14px;
+    }
+
+    .buttons {
+      margin-top: 12px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 8px 14px;
+      border: 1px solid #d0d0d0;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #222;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #f5f5f5;
     }
 
     h2 {
-      font-size: 18px;
-      margin-top: 45px;
-      margin-bottom: 10px;
-      font-weight: 600;
+      font-size: 22px;
+      margin-top: 52px;
+      margin-bottom: 16px;
+      font-weight: 650;
+      border-bottom: 1px solid #e8e8e8;
+      padding-bottom: 6px;
     }
 
     p {
-      font-size: 15px;
-      margin-bottom: 12px;
+      font-size: 16px;
+      margin-bottom: 14px;
+      color: #333;
     }
 
     ul {
-      padding-left: 18px;
-      font-size: 15px;
+      padding-left: 20px;
     }
 
     li {
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+      font-size: 15.5px;
     }
 
     a {
-      color: #222;
+      color: #0f52ba;
+      text-decoration: none;
+    }
+
+    a:hover {
       text-decoration: underline;
     }
 
-    .center {
-      text-align: left;
+    .paper-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .paper-meta {
+      color: #666;
+      margin-top: 3px;
+      font-size: 14px;
+    }
+
+    .news-item {
+      margin-bottom: 12px;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #eaeaea;
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .hero-text h1 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <img src="profile.jpg" alt="Photo of Stella Ding" />
+<div class="container">
 
-    <h1>Shi Ding</h1>
+  <!-- HERO SECTION -->
+  <div class="hero">
 
-    <p class="center">
-      <strong>Ph.D. Candidate · Georgia Institute of Technology</strong><br>
-      Expressive Machinery Lab · Advised by Regents' Professor Brian Magerko
-    </p>
+    <img src="profile.jpg" alt="Photo of Shi Ding" />
 
-    <h2>About</h2>
-      <p>
-Hello! I'm Shi (Stella) Ding, a Ph.D. student at the Georgia Institute of Technology.
+    <div class="hero-text">
 
-My research focuses on <strong>human–AI interaction and alignment</strong> in real-world AI systems. I study how AI systems behave in practice and develop approaches to better understand, assess, and improve their performance in complex, real-world interactions.
+      <h1>Shi (Stella) Ding</h1>
 
-I work within the NSF-funded EarSketch project, a large-scale learning platform used by over 1.5 million learners, where I design and evaluate LLM-powered systems that support code interaction and learning workflows in authentic educational settings. My work spans machine learning and human–computer interaction, with a focus on human–AI alignment and accessible learning systems.
+      <div class="subtitle">
+        Ph.D. Candidate in Digital Media · Georgia Institute of Technology<br>
+        Human–AI Interaction · LLM Evaluation · AI Alignment
+      </div>
 
-Previously, I worked as a research scientist at a U.S.-based AI startup, applying human-centered AI research to product development.
-</p>
+      <div class="buttons">
+        <a href="cv.pdf">CV</a>
+        <a href="https://scholar.google.com/citations?user=aUtxc2gAAAAJ&hl=en&oi=ao">Google Scholar</a>
+        <a href="https://github.com/stellashiding">GitHub</a>
+        <a href="https://www.linkedin.com/in/shiding/">LinkedIn</a>
+      </div>
 
-    <h2>Selected Achievements</h2>
-    <ul>
-      <li><strong>Fellowship:</strong> AI Child Safety Lab Fellowship Recipient (2026)</li>
-      <li><strong>Award Recipient:</strong> CRIDC Research Conference, Georgia Tech (2025)</li>
-
-      <li><strong>Invited Talks:</strong> Harvard University (2026), Georgia Tech (2025)</li>
-
-      <li><strong>Area Chair:</strong> DIS 2026 (Works-in-Progress Track)</li>
-      <li><strong>Reviewer:</strong> CHI, DIS, FAccT, AMIA, C&C (2026); NeurIPS, SIGCSE TS, CogSci (2025)</li>
-
-      <li>
-        <strong>Peer-reviewed Publications:</strong> Publications at leading venues across AI, HCI, and Learning Science, including ACM IDC (2024, 2026), ACM ASSETS (2025), AIED (2025), ACM SIGCSE TS (2026), and ISLS (CSLS 2026).
-</li>
-      </li>
-
-      <li>
-<strong>Workshop:</strong> First-author paper accepted at the NeurIPS 2025 Workshop on Socially Responsible and Trustworthy Foundation Models; indexed in the Stanford SCALE AI Repository. 
-      </li>
-      
-      <li><strong>Co-founder:</strong> Deeproject AI, Quadrant-i Startup Grant, Georgia Tech (2025)</li>
-    </ul>
-
-    <h2>Connect</h2>
-    <p class="center">
-      📧 <a href="mailto:sding84@gatech.edu">sding84@gatech.edu</a><br>
-      🔗 <a href="https://www.linkedin.com/in/shiding/">LinkedIn</a> · 
-      <a href="https://scholar.google.com/citations?user=aUtxc2gAAAAJ&hl=en&oi=ao">Google Scholar</a> · 
-      <a href="https://github.com/stellashiding">GitHub</a>
-    </p>
-
+    </div>
   </div>
+
+  <!-- ABOUT -->
+  <h2>About</h2>
+
+  <p>
+    I am a Ph.D. candidate in Digital Media at the Georgia Institute of Technology, advised by Regents' Professor Brian Magerko in the Expressive Machinery Lab.
+  </p>
+
+  <p>
+    My research focuses on human–AI interaction, LLM evaluation, and alignment in real-world AI systems. I study how AI systems behave across multi-turn interactions and develop structured evaluation approaches for understanding reliability, transparency, and human-centered performance.
+  </p>
+
+  <p>
+    I work within the NSF-funded EarSketch project, a large-scale creative coding platform used by over 1.5 million learners, where I design and evaluate AI-supported educational systems in authentic learning environments.
+  </p>
+
+  <p>
+    Previously, I worked as a research scientist at a U.S.-based AI startup, applying human-centered AI research to real-world product development.
+  </p>
+
+  <!-- RESEARCH INTERESTS -->
+  <h2>Research Interests</h2>
+
+  <ul>
+    <li>Human–AI Interaction</li>
+    <li>LLM Evaluation & Alignment</li>
+    <li>AI in Education</li>
+    <li>Human-Centered AI</li>
+    <li>AI Safety & Reliability</li>
+    <li>Accessible Learning Systems</li>
+  </ul>
+
+  <!-- PUBLICATIONS -->
+  <h2>Selected Publications</h2>
+
+  <ul>
+
+    <li>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/xxxx.xxxxx">
+          Beyond Aggregate Metrics: Structured Behavioral Evaluation of LLMs
+        </a>
+      </div>
+
+      <div class="paper-meta">
+        S. Ding, S. Tan<br>
+        NeurIPS 2026 Submission
+      </div>
+    </li>
+
+    <li>
+      <div class="paper-title">
+        <a href="https://arxiv.org/pdf/2512.04107">
+          Evaluating Multi-turn Human-AI Interaction
+        </a>
+      </div>
+
+      <div class="paper-meta">
+        S. Ding, S. Tan<br>
+        ACL 2026 EvalEval Workshop
+      </div>
+    </li>
+
+    <li>
+      <div class="paper-title">
+        <a href="https://dl.acm.org/doi/10.1145/3628516.3659383">
+          Accessible Human-AI Interaction in Expressive Programming Learning Environments
+        </a>
+      </div>
+
+      <div class="paper-meta">
+        ACM IDC 2024
+      </div>
+    </li>
+
+    <li>
+      <div class="paper-title">
+        <a href="https://dl.acm.org/doi/10.1145/3663547.3759703">
+          Designing Accessible AI Learning Experiences for Blind Learners
+        </a>
+      </div>
+
+      <div class="paper-meta">
+        ACM ASSETS 2025
+      </div>
+    </li>
+
+    <li>
+      <div class="paper-title">
+        <a href="https://link.springer.com/chapter/10.1007/978-3-031-98459-4_36">
+          Human-Centered AI Evaluation in Educational Systems
+        </a>
+      </div>
+
+      <div class="paper-meta">
+        AIED 2025
+      </div>
+    </li>
+
+    <li>
+      <div class="paper-title">
+        <a href="https://dl.acm.org/doi/10.1145/3770761.3777259">
+          AI-Supported Creative Learning in Educational Contexts
+        </a>
+      </div>
+
+      <div class="paper-meta">
+        ACM SIGCSE TS 2026
+      </div>
+    </li>
+
+  </ul>
+
+  <!-- PROJECTS -->
+  <h2>Projects</h2>
+
+  <ul>
+
+    <li>
+      <strong>EarSketch AI Agent</strong><br>
+      Designing LLM-powered learning support systems for creative coding and music programming environments.
+    </li>
+
+    <li>
+      <strong>RHCA Evaluation Framework</strong><br>
+      A structured framework for evaluating reasoning transparency, helpfulness, consistency, and context alignment in multi-turn human-AI interaction.
+    </li>
+
+    <li>
+      <strong>Deeproject AI</strong><br>
+      AI evaluation and reliability startup focused on scalable human-centered evaluation pipelines for AI systems.
+    </li>
+
+  </ul>
+
+  <!-- ACHIEVEMENTS -->
+  <h2>Awards & Service</h2>
+
+  <ul>
+
+    <li>
+      AI Child Safety Lab Fellowship Recipient (2026)
+    </li>
+
+    <li>
+      CRIDC Research Conference Award Recipient, Georgia Tech (2025)
+    </li>
+
+    <li>
+      Invited Talks: Harvard University (2026), Georgia Tech (2025)
+    </li>
+
+    <li>
+      Area Chair: DIS 2026 (Works-in-Progress Track)
+    </li>
+
+    <li>
+      Reviewer: CHI, DIS, FAccT, AMIA, C&C (2026); NeurIPS, SIGCSE TS, CogSci (2025)
+    </li>
+
+    <li>
+      Co-founder, Deeproject AI · Quadrant-i Startup Grant, Georgia Tech
+    </li>
+
+  </ul>
+
+  <!-- NEWS -->
+  <h2>News</h2>
+
+  <div class="news-item">
+    • ACL 2026 EvalEval Workshop paper accepted.
+  </div>
+
+  <div class="news-item">
+    • Invited to give a talk at Harvard University HGSE (2026).
+  </div>
+
+  <div class="news-item">
+    • Developing structured evaluation frameworks for multi-turn human–AI interaction.
+  </div>
+
+  <!-- CONTACT -->
+  <h2>Contact</h2>
+
+  <p>
+    📧 <a href="mailto:sding84@gatech.edu">sding84@gatech.edu</a><br>
+
+    🔗
+    <a href="https://scholar.google.com/citations?user=aUtxc2gAAAAJ&hl=en&oi=ao">Google Scholar</a> ·
+
+    <a href="https://github.com/stellashiding">GitHub</a> ·
+
+    <a href="https://www.linkedin.com/in/shiding/">LinkedIn</a>
+  </p>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 Shi Ding · Georgia Institute of Technology
+  </div>
+
+</div>
+
 </body>
 </html>
