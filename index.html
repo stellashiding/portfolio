@@ -117,6 +117,122 @@
       line-height: 1.7;
     }
 
+    /* ===== Publications ===== */
+
+.publications {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.paper-card {
+
+  position: relative;
+
+  padding: 18px 22px;
+  margin-bottom: 18px;
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.82);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  opacity: 0;
+  transform: translateY(18px);
+
+  animation: fadeUp 0.8s forwards;
+}
+
+.paper-card:hover {
+
+  transform:
+    translateY(-4px)
+    scale(1.01);
+
+  border-color: rgba(15,82,186,0.25);
+
+  box-shadow:
+    0 12px 30px rgba(15,82,186,0.08);
+}
+
+.paper-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.paper-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.paper-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.paper-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.paper-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.venue-tag {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  padding: 4px 10px;
+
+  border-radius: 999px;
+
+  background: #eef4ff;
+
+  color: #0f52ba;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.paper-title a {
+
+  color: #111;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.paper-title a:hover {
+
+  color: #0f52ba;
+}
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
     @media (max-width: 700px) {
 
       .hero {
@@ -173,7 +289,7 @@
 
 
 <p>
-  I am a Ph.D. student at the Georgia Institute of Technology working on human–AI interaction, LLM evaluation, and alignment in real-world AI systems. I am advised by Regents Professor <a href="https://iac.gatech.edu/people/person/brian-magerko" target="_blank">Brian Magerko</a> in the Expressive Machinery Lab.
+  I am a Ph.D. candidate at the Georgia Institute of Technology working on human–AI interaction, LLM evaluation, and alignment in real-world AI systems. I am advised by Regents Professor <a href="https://iac.gatech.edu/people/person/brian-magerko" target="_blank">Brian Magerko</a> in the Expressive Machinery Lab.
 </p>
 
 <p>
@@ -182,86 +298,98 @@
 
   <!-- PUBLICATIONS -->
 
-  <h2>Selected Publications</h2>
+<h2>Selected Publications</h2>
 
-  <ul>
+<ul class="publications">
 
-    <li>
+  <li class="paper-card">
 
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2605.18660">
-          Evaluating Multi-turn Human-AI Interaction
-        </a>
-      </div>
+    <span class="venue-tag">ACL 2026</span>
 
-      <div class="paper-meta">
-        Shi Ding, Sijian Tan<br>
-        EvalEval Workshop at the Annual Meeting of the Association for Computational Linguistics (ACL), 2026
-      </div>
+    <div class="paper-title">
+      <a href="https://arxiv.org/abs/2605.18660">
+        Evaluating Multi-turn Human-AI Interaction
+      </a>
+    </div>
 
-    </li>
+    <div class="paper-meta">
+      Shi Ding, Sijian Tan<br>
+      EvalEval Workshop at the Annual Meeting of the Association for Computational Linguistics (ACL), 2026
+    </div>
 
-    <li>
+  </li>
 
-      <div class="paper-title">
-        <a href="https://arxiv.org/pdf/2512.04107">
-          Rethinking AI Evaluation through TEACH-AI: A Human-Centered Benchmark and Toolkit for Evaluating AI Assistants in Education
-        </a>
-      </div>
+  <li class="paper-card">
 
-      <div class="paper-meta">
-        Shi Ding, Brian Magerko<br>
-        Socially Responsible and Trustworthy Foundation Models Workshop at NeurIPS, 2025
-      </div>
+    <span class="venue-tag">NeurIPS 2025</span>
 
-    </li>
+    <div class="paper-title">
+      <a href="https://arxiv.org/pdf/2512.04107">
+        Rethinking AI Evaluation through TEACH-AI: A Human-Centered Benchmark and Toolkit for Evaluating AI Assistants in Education
+      </a>
+    </div>
 
-    <li>
+    <div class="paper-meta">
+      Shi Ding, Brian Magerko<br>
+      Socially Responsible and Trustworthy Foundation Models Workshop at NeurIPS, 2025
+    </div>
 
-      <div class="paper-title">
-        <a href="https://link.springer.com/chapter/10.1007/978-3-031-98459-4_36">
-          Considering Large Language Model Integration in Expressive Computer Science Learning Environments for Blind and Visually Impaired Learners through Co-design
-        </a>
-      </div>
+  </li>
 
-      <div class="paper-meta">
-        Shi Ding, Jason Brent Smith, Brian Magerko<br>
-        Proceedings of the International Conference on Artificial Intelligence in Education (AIED 2025), Springer Nature
-      </div>
+  <li class="paper-card">
 
-    </li>
+    <span class="venue-tag">AIED 2025</span>
 
-    <li>
+    <div class="paper-title">
+      <a href="https://link.springer.com/chapter/10.1007/978-3-031-98459-4_36">
+        Considering Large Language Model Integration in Expressive Computer Science Learning Environments for Blind and Visually Impaired Learners through Co-design
+      </a>
+    </div>
 
-      <div class="paper-title">
-        <a href="https://dl.acm.org/doi/pdf/10.1145/3770761.3777259">
-          Bridging Responsible AI and AI Literacy: The TEACH-RAI Framework and Toolkit for Education, Design, and Research
-        </a>
-      </div>
+    <div class="paper-meta">
+      Shi Ding, Jason Brent Smith, Brian Magerko<br>
+      Proceedings of the International Conference on Artificial Intelligence in Education (AIED 2025), Springer Nature
+    </div>
 
-      <div class="paper-meta">
-        Shi Ding, Brian Magerko<br>
-        Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE TS), 2026
-      </div>
+  </li>
 
-    </li>
+  <li class="paper-card">
 
-    <li>
+    <span class="venue-tag">SIGCSE 2026</span>
 
-      <div class="paper-title">
-        <a href="https://dl.acm.org/doi/pdf/10.1145/3628516.3659383">
-          Redesigning EarSketch for Inclusive CS Education: A Participatory Design Approach
-        </a>
-      </div>
+    <div class="paper-title">
+      <a href="https://dl.acm.org/doi/pdf/10.1145/3770761.3777259">
+        Bridging Responsible AI and AI Literacy: The TEACH-RAI Framework and Toolkit for Education, Design, and Research
+      </a>
+    </div>
 
-      <div class="paper-meta">
-        Shi Ding, Jason Brent Smith, Stephen Garrett, Brian Magerko<br>
-        Proceedings of the 23rd Annual ACM Interaction Design and Children Conference (IDC), 2024
-      </div>
+    <div class="paper-meta">
+      Shi Ding, Brian Magerko<br>
+      Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE TS), 2026
+    </div>
 
-    </li>
+  </li>
 
-  </ul>
+  <li class="paper-card">
+
+    <span class="venue-tag">IDC 2026</span>
+
+    <div class="paper-title">
+      <a href="https://par.nsf.gov/servlets/purl/10681096">
+        Human–AI Interaction for Accessible CS Learning: Co-Designing AI with Blind and Visually Impaired Learners
+      </a>
+    </div>
+
+    <div class="paper-meta">
+      Shi Ding, Jason Brent Smith, Kevin Gautier, Stephen Garrett,
+      Brian Magerko, Jason Freeman, Bryan Pardo,
+      Stephanie Ludi, Taneisha Lee, Tom McKlin<br>
+      Proceedings of the ACM Interaction Design and Children Conference (IDC), 2026
+    </div>
+
+  </li>
+
+</ul>
 
   <!-- SERVICE -->
 <!-- AWARDS & SERVICE -->
