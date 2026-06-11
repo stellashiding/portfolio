@@ -232,53 +232,60 @@
     transform: translateY(0);
   }
 }
-    /* ===== News ===== */
+
+/* ===== NEWS ===== */
 
 .news-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-top: 10px;
 }
 
-.news-list li {
+.news-item {
 
-  padding: 12px 0;
+  padding: 10px 14px;
 
-  border-bottom: 1px solid rgba(0,0,0,0.06);
+  border-left: 2px solid #d8e4ff;
 
-  opacity: 0;
-  transform: translateY(10px);
-
-  animation: fadeUp 0.7s forwards;
+  margin-bottom: 10px;
 
   transition:
-    transform 0.25s ease,
-    color 0.25s ease;
+    transform .25s ease,
+    background-color .25s ease;
+
+  opacity: 0;
+
+  animation: fadeUp .7s forwards;
 }
 
-.news-list li:nth-child(1) {
-  animation-delay: 0.1s;
+.news-item:hover {
+
+  transform: translateX(6px);
+
+  background: #f8faff;
 }
 
-.news-list li:nth-child(2) {
-  animation-delay: 0.2s;
+.news-item:nth-child(1) {
+  animation-delay: .1s;
 }
 
-.news-list li:nth-child(3) {
-  animation-delay: 0.3s;
+.news-item:nth-child(2) {
+  animation-delay: .2s;
 }
 
-.news-list li:nth-child(4) {
-  animation-delay: 0.4s;
+.news-item:nth-child(3) {
+  animation-delay: .3s;
 }
 
-.news-list li:nth-child(5) {
-  animation-delay: 0.5s;
-}
+.news-date {
 
-.news-list li:hover {
-  transform: translateX(4px);
+  display: inline-block;
+
+  width: 90px;
+
   color: #0f52ba;
+
+  font-size: 13px;
+
+  font-weight: 600;
 }
 
     @media (max-width: 700px) {
@@ -333,7 +340,7 @@
 
   <!-- ABOUT -->
 
-  <h2>About</h2>
+<h2>About</h2>
 
 <p>
   I am a Ph.D. Candidate at the Georgia Institute of Technology, advised by Regents Professor
@@ -345,33 +352,33 @@
   My research lies at the intersection of Human–AI Interaction, AI Evaluation, and AI Alignment. I develop human-centered methods for understanding and evaluating how AI systems behave in real-world interactions, with a particular focus on large language models, AI agents, and human-facing AI systems.
 </p>
 
- <p>
-  At Georgia Tech, I currently contribute to the
+<p>
+  At Georgia Tech, I contribute to the
   <a href="https://earsketch.gatech.edu/landing/#/" target="_blank">NSF-funded EarSketch project</a>,
-  where I study human–AI interaction in learning environments, accessibility, and the evaluation of AI systems designed to support diverse learners.
-</p>
-
-  <p>
-  My broader research interests include Human-Centered AI, AI Evaluation, Alignment,
-  Agent Behavior, Human Feedback, and Post-Training Methods for AI Systems.
-  My work focuses on understanding, evaluating, and improving how AI systems
-  reason, communicate, and collaborate with people in real-world interactions.
+  where I study AI-supported learning, accessibility, and the design of AI systems that better support diverse learners. More broadly, I am interested in how AI systems reason, communicate, and collaborate with people in real-world contexts.
 </p>
 
 
   <h2>News</h2>
 
-<ul class="news-list">
+<div class="news-list">
 
-  <li>Jun 2026 — Successfully completed my Ph.D. Proposal Defense.</li>
+  <div class="news-item">
+    <span class="news-date">Jun 2026</span>
+    Proposal Defense Passed 🎉
+  </div>
 
-  <li>Apr 2026 — ACL 2026 workshop paper accepted.</li>
+  <div class="news-item">
+    <span class="news-date">Jun 2026</span>
+    Paper accepted to ACL 2026 EvalEval Workshop
+  </div>
 
-  <li>Mar 2026 — ISLS 2026 (CSLS Track) paper accepted.</li>
+  <div class="news-item">
+    <span class="news-date">May 2026</span>
+    Paper accepted to IDC 2026
+  </div>
 
-  <li>Mar 2026 — ACM IDC 2026 paper accepted.</li>
-
-</ul>
+</div>
   
 
   <!-- PUBLICATIONS -->
