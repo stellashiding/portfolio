@@ -232,6 +232,54 @@
     transform: translateY(0);
   }
 }
+    /* ===== News ===== */
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  animation: fadeUp 0.7s forwards;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.news-list li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.news-list li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.news-list li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.news-list li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.news-list li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.news-list li:hover {
+  transform: translateX(4px);
+  color: #0f52ba;
+}
 
     @media (max-width: 700px) {
 
@@ -268,9 +316,9 @@
 
       <h1>Shi Ding</h1>
 
-<div class="subtitle">
-  Human–AI Interaction Researcher<br>
-  Georgia Institute of Technology · Deeproject AI
+      <div class="subtitle">
+  Human-Centered AI · AI Evaluation · Alignment<br>
+  Georgia Institute of Technology
 </div>
 
       <div class="links">
@@ -302,6 +350,29 @@
   <a href="https://earsketch.gatech.edu/landing/#/" target="_blank">NSF-funded EarSketch project</a>,
   where I study human–AI interaction in learning environments, accessibility, and the evaluation of AI systems designed to support diverse learners.
 </p>
+
+  <p>
+  My broader research interests include Human-Centered AI, AI Evaluation, Alignment,
+  Agent Behavior, Human Feedback, and Post-Training Methods for AI Systems.
+  My work focuses on understanding, evaluating, and improving how AI systems
+  reason, communicate, and collaborate with people in real-world interactions.
+</p>
+
+
+  <h2>News</h2>
+
+<ul class="news-list">
+
+  <li>Jun 2026 — Successfully completed my Ph.D. Proposal Defense.</li>
+
+  <li>Apr 2026 — ACL 2026 workshop paper accepted.</li>
+
+  <li>Mar 2026 — ISLS 2026 (CSLS Track) paper accepted.</li>
+
+  <li>Mar 2026 — ACM IDC 2026 paper accepted.</li>
+
+</ul>
+  
 
   <!-- PUBLICATIONS -->
 
