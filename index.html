@@ -230,38 +230,6 @@
       font-size: 13.5px;
     }
 
-    /* ===== News ===== */
-
-    .news-list {
-      margin-top: 10px;
-    }
-
-    .news-item {
-      display: flex;
-      gap: 14px;
-      padding: 11px 14px;
-      margin-bottom: 10px;
-      border-left: 2px solid var(--blue-border);
-      transition: transform 0.25s ease, background-color 0.25s ease;
-    }
-
-    .news-item:hover {
-      transform: translateX(5px);
-      background: var(--surface-soft);
-    }
-
-    .news-date {
-      flex: 0 0 84px;
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 650;
-    }
-
-    .news-text {
-      color: #333b44;
-      font-size: 14.5px;
-    }
-
     /* ===== Publications ===== */
 
     .publications {
@@ -347,24 +315,6 @@
       font-weight: 650;
     }
 
-    /* ===== Awards and service ===== */
-
-    .service-list {
-      padding-left: 20px;
-    }
-
-    .service-list li {
-      margin-bottom: 11px;
-      color: #3a424c;
-      font-size: 15px;
-    }
-
-    /* ===== Contact ===== */
-
-    .contact {
-      margin-bottom: 20px;
-    }
-
     /* ===== Animation ===== */
 
     @keyframes fadeUp {
@@ -410,14 +360,7 @@
         font-size: 31px;
       }
 
-      .news-item {
-        display: block;
-      }
 
-      .news-date {
-        display: block;
-        margin-bottom: 3px;
-      }
     }
 
     @media (max-width: 650px) {
@@ -440,15 +383,22 @@
         padding: 17px;
       }
     }
-  </style>
+  
+.project-card { align-items: start; }
+.project-card.text-only { grid-template-columns: 1fr; }
+.related-publications { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
+.related-publications h4 { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
+.related-publications .paper-card { padding: 0; margin: 0 0 18px; border: 0; border-radius: 0; background: transparent; }
+.related-publications .paper-card:last-child { margin-bottom: 0; }
+.related-publications .paper-card:hover { transform: none; box-shadow: none; }
+.related-publications .paper-title { font-size: 14.5px; }
+.related-publications .paper-meta { font-size: 12.5px; }
+.related-publications .venue-tag, .related-publications .award-tag { font-size: 9.5px; letter-spacing: .2px; }
+a:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+</style>
 </head>
 
-<body>
-  <main class="container">
-
-    <!-- HERO -->
-
-    <header class="hero">
+<body><main class="container"><header class="hero">
       <img src="profile.jpg" alt="Portrait of Shi Ding" />
 
       <div class="hero-text">
@@ -485,55 +435,11 @@
           </a>
         </div>
       </div>
-    </header>
-
-    <!-- ABOUT -->
-
-    <section>
-      <h2>About</h2>
-
-      <p>
-        I am a Ph.D. Candidate at the Georgia Institute of Technology, advised by Regents Professor
-        <a
-          href="https://iac.gatech.edu/people/person/brian-magerko"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Brian Magerko
-        </a>
-        in the Expressive Machinery Lab.
-      </p>
-
-      <p>
-        My research lies at the intersection of human-centered AI, agentic AI, and AI evaluation.
-        My goal is to make AI systems more reliable, transparent, and aligned with human needs.
-      </p>
-
-      <p>
-        At Georgia Tech, I design, develop, and evaluate human-facing AI systems through real-world
-        deployments, including the
-        <a
-          href="https://earsketch.gatech.edu/landing/#/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          NSF-funded EarSketch project
-        </a>,
-        where I investigate human-AI interaction, LLM-powered learning, and accessibility in
-        educational contexts.
-      </p>
-    </section>
-
-    <!-- SELECTED PROJECTS -->
-
-    <section>
-      <h2>Selected Projects</h2>
-
-      <div class="projects-grid">
-
-        <!-- EarSketch AI Assistant -->
-
-        <div class="project-card">
+    </header><section id="about"><h2>About</h2>
+<p>I am a Ph.D. candidate in Digital Media at Georgia Tech and a member of the Expressive Machinery Lab, advised by <a href="https://iac.gatech.edu/people/person/brian-magerko" target="_blank" rel="noopener noreferrer">Brian Magerko</a>. My research focuses on human–AI interaction, human-centered AI evaluation, and accessible learning technologies. I hold an M.S. in Digital Media from Georgia Tech and previously studied at Minzu University of China. I have also presented my research at Harvard University.</p>
+<p>At Georgia Tech, I have worked with faculty including <a href="https://iac.gatech.edu/people/person/brian-magerko" target="_blank" rel="noopener noreferrer">Brian Magerko</a>, <a href="https://richmondywong.com/" target="_blank" rel="noopener noreferrer">Richmond Wong</a>, <a href="https://chrismaclellan.com/" target="_blank" rel="noopener noreferrer">Chris MacLellan</a>, <a href="https://homes.lmc.gatech.edu/~nitsche/" target="_blank" rel="noopener noreferrer">Michael Nitsche</a>, and <a href="https://music.gatech.edu/jason-freeman/" target="_blank" rel="noopener noreferrer">Jason Freeman</a>.</p>
+<p>My honors include a CRIDC Research Conference Award at Georgia Tech (2025), a Quadrant-i Startup Grant at Georgia Tech (2025–2026), 🏆 Best Paper Honorable Mention (WIP) at ACM IDC (2026), and an AI Child Safety Lab Fellowship (2026).</p>
+<p>My academic leadership roles include Area Chair for the DIS 2026 Works-in-Progress Track and Session Chair for the ACL 2026 NLG, RAG, and Efficiency Track. In 2025–2026, I reviewed for CHI, DIS, FAccT, AMIA, C&amp;C, NeurIPS, SIGCSE TS, and CogSci.</p></section><section id="research"><h2>Selected Projects &amp; Publications</h2><div class="projects-grid"><div class="project-card">
 
           <img
             class="project-image"
@@ -576,12 +482,29 @@
               </a>
             </div>
 
+          <div class="related-publications"><h4>Related publications</h4><ul class="publications"><li class="paper-card">
+
+          <div class="paper-tags">
+            <span class="venue-tag">NeurIPS 2025 · Workshop</span>
           </div>
-        </div>
 
-        <!-- Accessible EarSketch -->
+          <div class="paper-title">
+            <a
+              href="https://arxiv.org/pdf/2512.04107"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rethinking AI Evaluation through TEACH-AI: A Human-Centered Benchmark and Toolkit for Evaluating AI Assistants in Education
+            </a>
+          </div>
 
-        <div class="project-card">
+          <div class="paper-meta">
+            <strong>Shi Ding</strong>, Brian Magerko<br />
+            Socially Responsible and Trustworthy Foundation Models Workshop at NeurIPS, 2025
+          </div>
+
+        </li></ul></div></div>
+        </div><div class="project-card">
 
           <img
             class="project-image award-image"
@@ -599,7 +522,7 @@
               <span class="project-tag">Qualitative Research</span>
             </div>
 
-            <h3>Accessible EarSketch</h3>
+            <h3>Accessible AI</h3>
 
             <p>
               A qualitative co-design research project with blind and visually impaired high school learners
@@ -607,26 +530,61 @@
               support in creative coding.
             </p>
 
-            <div class="project-award">
-              🏆 ACM IDC 2026 Best Paper Honorable Mention
-            </div>
+            
 
-            <div class="project-links">
-              <a
-                href="https://dl.acm.org/doi/pdf/10.1145/3773077.3812141"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Paper
-              </a>
-            </div>
+            
 
+          <div class="related-publications"><h4>Related publications</h4><ul class="publications"><li class="paper-card">
+
+          <div class="paper-tags">
+            <span class="venue-tag">IDC 2026</span>
+            <span class="award-tag">Award</span>
           </div>
-        </div>
 
-<!-- Deeproject -->
+          <div class="paper-title">
+            <a
+              href="https://par.nsf.gov/servlets/purl/10681096"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Human–AI Interaction for Accessible CS Learning: Co-Designing AI with Blind and Visually Impaired Learners
+            </a>
+          </div>
 
-<div class="project-card">
+          <div class="paper-meta">
+            <strong>Shi Ding</strong>, Jason Brent Smith, Kevin Gautier, Stephen Garrett,
+            Brian Magerko, Jason Freeman, Bryan Pardo, Stephanie Ludi,
+            Taneisha Lee, Tom McKlin<br />
+            Proceedings of the ACM Interaction Design and Children Conference (IDC), 2026
+          </div>
+
+          <div class="award-line">
+            🏆 Best Paper Honorable Mention (WIP)
+          </div>
+
+        </li><li class="paper-card">
+
+          <div class="paper-tags">
+            <span class="venue-tag">AIED 2025</span>
+          </div>
+
+          <div class="paper-title">
+            <a
+              href="https://link.springer.com/chapter/10.1007/978-3-031-98459-4_36"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Considering Large Language Model Integration in Expressive Computer Science Learning Environments for Blind and Visually Impaired Learners through Co-design
+            </a>
+          </div>
+
+          <div class="paper-meta">
+            <strong>Shi Ding</strong>, Jason Brent Smith, Brian Magerko<br />
+            Proceedings of the International Conference on Artificial Intelligence in Education (AIED), 2025
+          </div>
+
+        </li></ul></div></div>
+        </div><div class="project-card">
 
   <img
     class="project-image"
@@ -666,125 +624,7 @@ A human-centered AI platform combining evaluation methods with scalable
 </a>
     </div>
 
-  </div>
-
-</div>
-
-    <!-- NEWS -->
-
-    <section>
-      <h2>News</h2>
-
-      <div class="news-list">
-
-        <div class="news-item">
-          <span class="news-date">Jul 2026</span>
-          <span class="news-text">
-            Received the 🏆 Honorable Mention for the Best WIP Award at ACM IDC 2026
-          </span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-date">Jun 2026</span>
-          <span class="news-text">
-            First-author paper accepted to ISLS 2026 and presented at UC Irvine (CS Track)
-          </span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-date">Jun 2026</span>
-          <span class="news-text">
-            Successfully passed Ph.D. proposal defense
-          </span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-date">Jun 2026</span>
-          <span class="news-text">
-            First-author paper accepted to the ACL 2026 EvalEval Workshop
-          </span>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PUBLICATIONS -->
-
-    <section>
-      <h2>Selected Publications</h2>
-
-      <ul class="publications">
-
-        <li class="paper-card">
-
-          <div class="paper-tags">
-            <span class="venue-tag">ACL 2026</span>
-          </div>
-
-          <div class="paper-title">
-            <a
-              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aUtxc2gAAAAJ&citation_for_view=aUtxc2gAAAAJ:g5m5HwL7SMYC"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Evaluating Multi-turn Human-AI Interaction
-            </a>
-          </div>
-
-          <div class="paper-meta">
-            <strong>Shi Ding</strong>, Sijian Tan<br />
-            EvalEval Workshop at the Annual Meeting of the Association for Computational Linguistics (ACL), 2026
-          </div>
-
-        </li>
-
-        <li class="paper-card">
-
-          <div class="paper-tags">
-            <span class="venue-tag">NeurIPS 2025</span>
-          </div>
-
-          <div class="paper-title">
-            <a
-              href="https://arxiv.org/pdf/2512.04107"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Rethinking AI Evaluation through TEACH-AI: A Human-Centered Benchmark and Toolkit for Evaluating AI Assistants in Education
-            </a>
-          </div>
-
-          <div class="paper-meta">
-            <strong>Shi Ding</strong>, Brian Magerko<br />
-            Socially Responsible and Trustworthy Foundation Models Workshop at NeurIPS, 2025
-          </div>
-
-        </li>
-
-        <li class="paper-card">
-
-          <div class="paper-tags">
-            <span class="venue-tag">AIED 2025</span>
-          </div>
-
-          <div class="paper-title">
-            <a
-              href="https://link.springer.com/chapter/10.1007/978-3-031-98459-4_36"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Considering Large Language Model Integration in Expressive Computer Science Learning Environments for Blind and Visually Impaired Learners through Co-design
-            </a>
-          </div>
-
-          <div class="paper-meta">
-            <strong>Shi Ding</strong>, Jason Brent Smith, Brian Magerko<br />
-            Proceedings of the International Conference on Artificial Intelligence in Education (AIED), 2025
-          </div>
-
-        </li>
-
-        <li class="paper-card">
+  <div class="related-publications"><h4>Related publications</h4><ul class="publications"><li class="paper-card">
 
           <div class="paper-tags">
             <span class="venue-tag">SIGCSE 2026</span>
@@ -805,96 +645,27 @@ A human-centered AI platform combining evaluation methods with scalable
             Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE TS), 2026
           </div>
 
-        </li>
-
-        <li class="paper-card">
+        </li><li class="paper-card">
 
           <div class="paper-tags">
-            <span class="venue-tag">IDC 2026</span>
-            <span class="award-tag">Award</span>
+            <span class="venue-tag">ACL 2026 · EvalEval Workshop</span>
           </div>
 
           <div class="paper-title">
             <a
-              href="https://par.nsf.gov/servlets/purl/10681096"
+              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aUtxc2gAAAAJ&citation_for_view=aUtxc2gAAAAJ:g5m5HwL7SMYC"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Human–AI Interaction for Accessible CS Learning: Co-Designing AI with Blind and Visually Impaired Learners
+              Evaluating Multi-turn Human-AI Interaction
             </a>
           </div>
 
           <div class="paper-meta">
-            <strong>Shi Ding</strong>, Jason Brent Smith, Kevin Gautier, Stephen Garrett,
-            Brian Magerko, Jason Freeman, Bryan Pardo, Stephanie Ludi,
-            Taneisha Lee, Tom McKlin<br />
-            Proceedings of the ACM Interaction Design and Children Conference (IDC), 2026
+            <strong>Shi Ding</strong>, Sijian Tan<br />
+            EvalEval Workshop at the Annual Meeting of the Association for Computational Linguistics (ACL), 2026
           </div>
 
-          <div class="award-line">
-            🏆 Honorable Mention for the Best WIP Award
-          </div>
+        </li></ul></div></div>
 
-        </li>
-
-      </ul>
-    </section>
-
-    <!-- AWARDS & SERVICE -->
-
-    <section>
-      <h2>Awards &amp; Service</h2>
-
-      <ul class="service-list">
-
-        <li>
-          🏆 Honorable Mention for the Best WIP Award, ACM IDC, 2026
-        </li>
-
-        <li>
-          AI Child Safety Lab Fellowship Recipient, 2026
-        </li>
-
-        <li>
-          CRIDC Research Conference Award Recipient, Georgia Institute of Technology, 2025
-        </li>
-
-        <li>
-          Invited Talks: Harvard University, 2026; Georgia Institute of Technology, 2025
-        </li>
-
-        <li>
-          Area Chair, DIS 2026 Works-in-Progress Track
-        </li>
-
-        <li>
-          Session Chair, ACL 2026 NLG, RAG, and Efficiency Track
-        </li>
-
-        <li>
-          Reviewer for CHI, DIS, FAccT, AMIA, C&amp;C, NeurIPS, SIGCSE TS, and CogSci, 2025–2026
-        </li>
-
-        <li>
-          Co-founder, Deeproject AI; Quadrant-i Startup Grant Recipient,
-          Georgia Institute of Technology, 2025–2026
-        </li>
-
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-
-    <section class="contact">
-      <h2>Contact</h2>
-
-      <p>
-        <a href="mailto:sding84@gatech.edu">
-          sding84@gatech.edu
-        </a>
-      </p>
-    </section>
-
-  </main>
-</body>
-</html>
+</div></div></section></main></body></html>
