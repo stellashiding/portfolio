@@ -3,550 +3,62 @@
   <head>
     <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shi Ding | Human-centered AI Researcher</title>
-    <meta name="description" content="Shi Ding is a Ph.D. Candidate at Georgia Tech researching AI agents, human-centered AI, and AI evaluation.">
-    <style>
-      :root {
-        --text: #24292f;
-        --muted: #657080;
-        --blue: #315cb5;
-        --blue-soft: #eef3fc;
-        --blue-border: #d9e3f5;
-        --surface: #fafaf8;
-        --surface-soft: #f3f4f2;
-        --border: #e2e5e9;
-        --shadow: 0 4px 16px rgba(17, 24, 39, 0.035);
-        --hero: #111827;
-        --hero-text: #f3f4f6;
-        --gold: #946b24;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        margin: 0;
-        background: var(--surface);
-        color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        line-height: 1.7;
-      }
-      .container {
-        width: min(1040px, calc(100% - 64px));
-        margin: 40px auto 88px;
-      }
-      a {
-        color: var(--blue);
-        text-decoration: none;
-        text-underline-offset: 3px;
-        overflow-wrap: anywhere;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      a:focus-visible {
-        outline: 2px solid var(--blue);
-        outline-offset: 4px;
-        border-radius: 2px;
-      }
-      /* Hero */
-.hero {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        padding: 48px;
-        margin-bottom: 64px;
-        border: 1px solid #202c41;
-        border-radius: 6px;
-        background: var(--hero);
-        color: var(--hero-text);
-        animation: fadeUp 0.45s ease both;
-      }
-      .hero img {
-        flex: 0 0 auto;
-        width: 128px;
-        height: 128px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 1px solid rgba(243, 244, 246, 0.2);
-      }
-      .hero-text {
-        min-width: 0;
-      }
-      .hero-text h1 {
-        margin: 0 0 8px;
-        color: var(--hero-text);
-        font-size: 54px;
-        font-weight: 650;
-        letter-spacing: -1.8px;
-        line-height: 1.12;
-      }
-      .hero-text .english-name {
-        margin: 0 0 18px;
-        color: #aab7cb;
-        font-size: 13px;
-        letter-spacing: 0.3px;
-        line-height: 1.5;
-      }
-      .subtitle {
-        margin-bottom: 20px;
-        color: #d1dae7;
-        font-size: 15px;
-        line-height: 1.8;
-      }
-      .hero a {
-        color: #c4d8ff;
-      }
-      .hero a:hover {
-        color: #ffffff;
-      }
-      .hero a:focus-visible {
-        outline-color: #c4d8ff;
-      }
-      .links {
-        color: #7d8ca3;
-        font-size: 13px;
-        line-height: 2;
-      }
-      .links a {
-        display: inline-block;
-        margin-right: 7px;
-      }
-      /* Sections and typography */
-section {
-        margin-top: 64px;
-        animation: fadeUp 0.45s ease both;
-      }
-      h2 {
-        margin: 0 0 26px;
-        padding-bottom: 14px;
-        border-bottom: 1px solid var(--border);
-        color: #344153;
-        font-size: 15px;
-        font-weight: 650;
-        letter-spacing: 1.5px;
-        line-height: 1.5;
-        text-transform: uppercase;
-      }
-      p {
-        margin: 0 0 19px;
-        color: var(--text);
-        font-size: 16px;
-        line-height: 1.8;
-      }
-      strong {
-        font-weight: 650;
-      }
-      #about > p {
-        max-width: 780px;
-      }
-      #about > p:last-child {
-        margin-bottom: 0;
-      }
-      ul {
-        margin-top: 0;
-      }
-      /* Research projects */
-.projects-grid {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 26px;
-      }
-      .project-card {
-        display: grid;
-        grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
-        gap: 32px;
-        align-items: start;
-        min-width: 0;
-        padding: 30px;
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        background: #ffffff;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      }
-      .project-card:hover {
-        border-color: #c8d2e1;
-        box-shadow: var(--shadow);
-      }
-      .project-card.text-only {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .project-content {
-        min-width: 0;
-      }
-      .project-image {
-        display: block;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 3 / 2;
-        object-fit: contain;
-        border: 1px solid #eceeea;
-        border-radius: 4px;
-        background: #faf8f4;
-      }
-      .award-image {
-        object-position: center top;
-      }
-      .project-content h3 {
-        margin: 0 0 13px;
-        color: #172338;
-        font-size: 23px;
-        font-weight: 650;
-        letter-spacing: -0.5px;
-        line-height: 1.35;
-      }
-      .project-content h3 a {
-        color: inherit;
-      }
-      .project-content p {
-        margin-bottom: 13px;
-        color: #485363;
-        font-size: 14px;
-        line-height: 1.75;
-      }
-      .project-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-bottom: 15px;
-      }
-      .project-tag {
-        display: inline-block;
-        padding: 3px 8px;
-        border-radius: 3px;
-        background: #f0f3f7;
-        color: #53637a;
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.15px;
-      }
-      .project-award {
-        display: inline-block;
-        margin-top: 4px;
-        color: var(--gold);
-        font-size: 13px;
-        font-weight: 600;
-      }
-      .project-links {
-        margin-top: 16px;
-        font-size: 13px;
-        font-weight: 600;
-      }
-      /* Publications */
-.publications {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      .paper-card {
-        min-width: 0;
-        margin: 0 0 24px;
-        padding: 20px;
-        border: 1px solid var(--border);
-        border-radius: 4px;
-        background: #ffffff;
-      }
-      .paper-card:last-child {
-        margin-bottom: 0;
-      }
-      .paper-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        margin-bottom: 10px;
-      }
-      .venue-tag,
-.award-tag {
-        display: inline-block;
-        padding: 3px 8px;
-        border-radius: 3px;
-        font-size: 10px;
-        font-weight: 650;
-        letter-spacing: 0.35px;
-        line-height: 1.6;
-        text-transform: uppercase;
-      }
-      .venue-tag {
-        background: var(--blue-soft);
-        color: var(--blue);
-      }
-      .award-tag {
-        background: #faf2df;
-        color: var(--gold);
-      }
-      .paper-title {
-        color: #172338;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.55;
-      }
-      .paper-title a {
-        color: inherit;
-      }
-      .paper-title a:hover {
-        color: var(--blue);
-      }
-      .paper-meta {
-        margin-top: 8px;
-        color: var(--muted);
-        font-size: 13px;
-        line-height: 1.7;
-      }
-      .paper-meta strong {
-        color: #49566a;
-      }
-      .award-line {
-        margin-top: 10px;
-        color: var(--gold);
-        font-size: 12px;
-        font-weight: 600;
-      }
-      .related-publications {
-        margin-top: 24px;
-        padding-top: 20px;
-        border-top: 1px solid var(--border);
-      }
-      .related-publications h4 {
-        margin: 0 0 17px;
-        color: var(--muted);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.9px;
-        text-transform: uppercase;
-      }
-      .related-publications .paper-card {
-        margin: 0 0 25px;
-        padding: 0;
-        border: 0;
-        border-radius: 0;
-        background: transparent;
-      }
-      .related-publications .paper-card:last-child {
-        margin-bottom: 0;
-      }
-      .related-publications .paper-title {
-        font-size: 15px;
-      }
-      .related-publications .paper-meta {
-        font-size: 12px;
-      }
-      .project-card.text-only .related-publications:first-child {
-        margin-top: 0;
-        padding-top: 0;
-        border-top: 0;
-      }
-      .review-status {
-        color: var(--muted);
-        font-weight: 600;
-      }
-      .manuscript h4 {
-        font-weight: 600;
-      }
-      .manuscript .paper-title {
-        font-size: 14px;
-        font-weight: 500;
-      }
-      /* Restrained motion */
-@keyframes fadeUp {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after {
-          animation: none !important;
-          transition: none !important;
-          scroll-behavior: auto !important;
-        }
-      }
-      /* Responsive layout */
-@media (max-width: 850px) {
-        .hero {
-          gap: 26px;
-          padding: 36px;
-        }
-        .hero-text h1 {
-          font-size: 48px;
-        }
-        .hero img {
-          width: 108px;
-          height: 108px;
-        }
-        .project-card {
-          grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-          gap: 24px;
-          padding: 24px;
-        }
-      }
-      @media (max-width: 700px) {
-        .container {
-          width: calc(100% - 32px);
-          margin: 16px auto 56px;
-        }
-        .hero {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 24px;
-          margin-bottom: 42px;
-          padding: 30px 26px;
-        }
-        .hero img {
-          width: 88px;
-          height: 88px;
-        }
-        .hero-text h1 {
-          font-size: 42px;
-          letter-spacing: -1.2px;
-        }
-        .subtitle {
-          font-size: 14px;
-        }
-        section {
-          margin-top: 44px;
-        }
-        h2 {
-          font-size: 13px;
-          letter-spacing: 1.1px;
-        }
-        .project-card {
-          grid-template-columns: minmax(0, 1fr);
-          gap: 24px;
-          padding: 24px;
-        }
-        .project-image {
-          max-height: 300px;
-        }
-      }
-      @media (max-width: 420px) {
-        .hero {
-          padding: 28px 22px;
-        }
-        .hero-text h1 {
-          font-size: 38px;
-        }
-        .project-card {
-          padding: 20px;
-        }
-        .links {
-          font-size: 12px;
-        }
-      }
-    </style>
+    <meta name="description" content="Shi Ding is a Ph.D. Candidate at Georgia Tech researching AI agents, human-centered AI, and AI evaluation."> <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="container">
-      <header class="hero">
-        <img src="profile.jpg" alt="Portrait of Shi Ding">
-        <div class="hero-text">
-          <h1>Shi Ding</h1>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="site-name" href="index.html">Shi Ding</a>
+      <nav class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a> <a href="research.html">Research</a> <a href="https://scholar.google.com/citations?user=aUtxc2gAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Scholar</a> <a href="mailto:sding84@gatech.edu">Contact</a></nav>
+    </header>
+    <main class="page" id="main">
+      <section class="home-intro" aria-labelledby="intro-title">
+        <div>
+          <p class="eyebrow">Human-centered AI research</p>
+          <h1 id="intro-title">Shi Ding</h1>
           <p class="english-name">English name: Stella</p>
-          <div class="subtitle">Human-Centered AI · AI Agents · AI literacy & safety ·ML & Data Science<br> <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Institute of Technology</a></div>
+          <p class="short-bio">I am a Ph.D. Candidate at Georgia Tech studying how AI systems can enhance human learning and strengthen human agency. My work spans human–AI interaction, human-centered AI evaluation, and accessible learning technologies.</p>
+          <p class="affiliation"><a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Institute of Technology</a> · <a href="https://expressivemachinery.gatech.edu/" target="_blank" rel="noopener noreferrer">Expressive Machinery Lab</a></p>
+          <p class="research-directions">Human-Centered AI · AI Agents · AI literacy & safety ·ML & Data Science</p>
           <div class="links"><a href="https://scholar.google.com/citations?user=aUtxc2gAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">🎓 Scholar</a> · <a href="https://github.com/stellashiding" target="_blank" rel="noopener noreferrer">💻 GitHub</a> · <a href="https://www.linkedin.com/in/shiding/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a> · <a href="mailto:sding84@gatech.edu">✉️ Email</a> · <a href="https://orcid.org/0009-0005-1509-1966" target="_blank" rel="noopener noreferrer">🆔 ORCID</a></div>
+          <a class="primary-link" href="research.html">View Research</a>
         </div>
-      </header>
-      <section id="about">
-        <h2>About</h2>
-        <p><strong>Shi Ding</strong> is an award-winning researcher at the <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Institute of Technology</a>, where she explores how frontier AI and interactive agentic systems can enhance human learning and strengthen human agency. She is a Ph.D. Candidate in Digital Media at the <a href="https://expressivemachinery.gatech.edu/" target="_blank" rel="noopener noreferrer">Expressive Machinery Lab</a>, advised by Regents’ Professor <a href="https://iac.gatech.edu/people/person/brian-magerko" target="_blank" rel="noopener noreferrer">Brian Magerko</a>. Her research broadly focuses on human–AI interaction, human-centered AI evaluation, and accessible learning technologies.</p>
-        <p>Her honors include a <strong>Best Paper Honorable Mention (WIP) at ACM IDC 2026</strong>, the CRIDC Research Award, and an AI Child Safety Lab Fellowship. Her publications cover human–AI interaction, human-centered AI, accessible computing, and AI literacy, with work appearing at <em>ACM IDC</em>, <em>SIGCSE</em>, <em>ASSETS</em>, and <em>AIED</em>, alongside first-author papers at <em>NeurIPS</em> and <em>ACL</em> workshops.</p>
-        <p>Her work has been cited in CHI, DIS, and ASSETS papers, in journals such as <em>Computers and Education: Artificial Intelligence</em>, and in <a href="https://arxiv.org/abs/2611.06830" target="_blank" rel="noopener noreferrer">research</a> coauthored by researchers affiliated with <strong>Google Research, Google DeepMind, and Harvard Business School</strong>. Her TEACH-AI framework is also cited as a source for multiple AI tutor evaluation criteria in <a href="https://aclanthology.org/2026.aimecon-sessions.15/" target="_blank" rel="noopener noreferrer">Xiao et al. (AIME-Con 2026)</a>.</p>
-        <p>Beyond her core research, she has collaborated with faculty across disciplines at <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Tech</a>, including <a href="https://www.cc.gatech.edu/people/mark-riedl" target="_blank" rel="noopener noreferrer">Mark Riedl</a>, <a href="https://lmc.gatech.edu/people/person/richmond-wong" target="_blank" rel="noopener noreferrer">Richmond Wong</a>, <a href="https://www.cc.gatech.edu/people/christopher-j-maclellan" target="_blank" rel="noopener noreferrer">Chris MacLellan</a>, <a href="https://iac.gatech.edu/people/person/michael-nitsche" target="_blank" rel="noopener noreferrer">Michael Nitsche</a>, and <a href="https://arts.gatech.edu/people/jason-freeman" target="_blank" rel="noopener noreferrer">Jason Freeman</a>.</p>
-        <p>She has presented her research at <a href="https://www.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard University</a>, <a href="https://www.tudelft.nl/en/" target="_blank" rel="noopener noreferrer">Delft University of Technology</a>, <a href="https://www.ucdavis.edu/" target="_blank" rel="noopener noreferrer">UC Davis</a>, <a href="https://uci.edu/" target="_blank" rel="noopener noreferrer">UC Irvine</a>, and the <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Tech</a> Responsible Computing, AI, &amp; Society Summit.</p>
-        <p>She has served as an Area Chair for ACM DIS, a Session Chair for ACL, and a reviewer for conferences including CHI, DIS, FAccT, AMIA, C&amp;C, NeurIPS, SIGCSE TS, and CogSci.</p>
-        <p>In industry, she previously worked as a Research Scientist at the AI startup Grasply AI. She is also a CREATE-X Fellow and the co-founder of Deeproject.AI, supported by the Quadrant-i Startup Grant, with mentorship from <a href="https://people.research.gatech.edu/richard-gruber" target="_blank" rel="noopener noreferrer">Richard Gruber</a> and <a href="https://quadrant-i.gatech.edu/william-shawn-yeager" target="_blank" rel="noopener noreferrer">William Shawn Yeager</a>.</p>
+        <img class="portrait" src="profile.jpg" alt="Portrait of Shi Ding" width="174" height="210" fetchpriority="high">
       </section>
-      <section id="research">
-        <h2>Selected Research &amp; Publications</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <img class="project-image" src="assets/earsketch-ai-concept-v2.webp" alt="Concept illustration of AI-assisted creative coding and musical collaboration" width="768" height="512" loading="lazy" decoding="async">
-            <div class="project-content">
-              <div class="project-tags"><span class="project-tag">Human–AI Interaction</span><span class="project-tag">Learning</span><span class="project-tag">Co-Design</span></div>
-              <h3>EarSketch AI Assistant</h3>
-              <p>Designing and developing a context-aware LLM assistant for creative coding. The assistant combines conversation history, curriculum retrieval, live code state, and platform tools. My work connects co-design with secondary school learners and educators to assistant requirements, implementation, and evaluation.</p>
-              <div class="project-links"><a href="https://earsketch.gatech.edu/landing/#/" target="_blank" rel="noopener noreferrer">Visit EarSketch</a></div>
-              <div class="related-publications">
-                <h4>Published work</h4>
-                <ul class="publications">
-                  <li class="paper-card">
-                    <div class="paper-tags"><span class="venue-tag">ACM IDC 2026</span> <span class="award-tag">Award</span></div>
-                    <div class="paper-title"><a href="https://dl.acm.org/doi/pdf/10.1145/3773077.3812141" target="_blank" rel="noopener noreferrer"> Human–AI Interaction for Accessible CS Learning: Co-Designing AI with Blind and Visually Impaired Learners </a></div>
-                    <div class="paper-meta"><strong>Shi Ding</strong>, Jason Brent Smith, Kevin Gautier, Stephen Garrett, Brian Magerko, Jason Freeman, Bryan Pardo, Stephanie Ludi, Taneisha Lee, Tom McKlin<br> Proceedings of the ACM Interaction Design and Children Conference (IDC), 2026</div>
-                    <div class="award-line">🏆 Best Paper Honorable Mention(WIP)</div>
-                  </li>
-                  <li class="paper-card">
-                    <div class="paper-tags"><span class="venue-tag">AIED 2025</span></div>
-                    <div class="paper-title"><a href="https://link.springer.com/chapter/10.1007/978-3-031-98459-4_36" target="_blank" rel="noopener noreferrer"> Considering Large Language Model Integration in Expressive Computer Science Learning Environments for Blind and Visually Impaired Learners through Co-design </a></div>
-                    <div class="paper-meta"><strong>Shi Ding</strong>, Jason Brent Smith, Brian Magerko<br> Proceedings of the International Conference on Artificial Intelligence in Education (AIED), 2025</div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <img class="project-image" src="assets/accessible-earsketch-concept.webp" alt="Concept illustration of accessible music coding with a tactile display and audio feedback" width="768" height="512" loading="lazy" decoding="async">
-            <div class="project-content">
-              <div class="project-tags"><span class="project-tag">Accessibility</span><span class="project-tag">Participatory Design</span></div>
-              <h3>Accessible EarSketch</h3>
-              <p>Making music programming more accessible to blind and visually impaired learners through sustained co-design with learners and educators. My work focuses on platform accessibility, non-visual interaction, and translating user needs into design requirements within the NSF-funded EarSketch project.</p>
-              <div class="project-links"><a href="https://earsketch.gatech.edu/landing/#/" target="_blank" rel="noopener noreferrer">Visit EarSketch</a></div>
-              <div class="related-publications">
-                <h4>Published work</h4>
-                <ul class="publications">
-                  <li class="paper-card">
-                    <div class="paper-tags"><span class="venue-tag">ACM ASSETS 2025</span></div>
-                    <div class="paper-title"><a href="https://dl.acm.org/doi/pdf/10.1145/3663547.3759703" target="_blank" rel="noopener noreferrer"> Using Co-Design to Investigate Affordances of an Expressive CS Learning Environment for Students who are BVI </a></div>
-                    <div class="paper-meta">Jason Brent Smith, Annie Chu, Noel Alben, <strong>Shi Ding</strong>, Kevin Gautier, Stephen Garrett, Brian Magerko, Jason Freeman, Bryan Pardo, Stephanie Ludi, Taneisha Lee, Tom McKlin<br> Proceedings of the 27th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS), 2025</div>
-                  </li>
-                </ul>
-              </div>
-              <div class="related-publications manuscript">
-                <h4>Journal manuscript under review</h4>
-                <div class="paper-title">Accessible EarSketch: Continuous Co-Design with Learners Who Are Blind and Visually Impaired for an Expressive Computer Science Learning Environment</div>
-                <div class="paper-meta">ACM Transactions on Accessible Computing (TACCESS) ·</div>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <img class="project-image" src="assets/ai-evaluation-spatial-v3.webp" alt="Concept illustration of a researcher inspecting spatial AI conversation trajectories in a futuristic research organization" width="768" height="512" loading="lazy" decoding="async">
-            <div class="project-content">
-              <div class="project-tags"><span class="project-tag">AI Evaluation and Risk Management </span><span class="project-tag">Interaction Design</span><span class="project-tag">Cross-Domain Research</span></div>
-              <h3>AI Trust, Risk, and Safety</h3>
-              <p>Developing human-centered approaches to understanding and evaluating AI across multi-turn interactions.</p>
-              <p>Through Deeproject.AI, I explore AI evaluation across domains, including digital media, engineering, fintech, and healthcare.</p>
-              <div class="project-links"><a href="https://create-x.gatech.edu/index%2ephp/node/11933" target="_blank" rel="noopener noreferrer">▶ CREATE-X Demo Video</a></div>
-              <div class="related-publications">
-                <h4>Published work</h4>
-                <ul class="publications">
-                  <li class="paper-card">
-                    <div class="paper-tags"><span class="venue-tag">ACL 2026 · EvalEval Workshop</span></div>
-                    <div class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=aUtxc2gAAAAJ&amp;citation_for_view=aUtxc2gAAAAJ:g5m5HwL7SMYC" target="_blank" rel="noopener noreferrer"> Evaluating Multi-turn Human-AI Interaction </a></div>
-                    <div class="paper-meta"><strong>Shi Ding</strong>, Sijian Tan<br> EvalEval Workshop at the Annual Meeting of the Association for Computational Linguistics (ACL), 2026</div>
-                  </li>
-                  <li class="paper-card">
-                    <div class="paper-tags"><span class="venue-tag">NeurIPS 2025 · Workshop</span></div>
-                    <div class="paper-title"><a href="https://arxiv.org/pdf/2512.04107" target="_blank" rel="noopener noreferrer"> Rethinking AI Evaluation through TEACH-AI: A Human-Centered Benchmark and Toolkit for Evaluating AI Assistants in Education </a></div>
-                    <div class="paper-meta"><strong>Shi Ding</strong>, Brian Magerko<br> Socially Responsible and Trustworthy Foundation Models Workshop at NeurIPS, 2025</div>
-                  </li>
-                  <li class="paper-card">
-                    <div class="paper-tags"><span class="venue-tag">SIGCSE TS 2026 · Poster</span></div>
-                    <div class="paper-title"><a href="https://dl.acm.org/doi/pdf/10.1145/3770761.3777259" target="_blank" rel="noopener noreferrer"> Bridging Responsible AI and AI Literacy: The TEACH-RAI Framework and Toolkit for Education, Design, and Research </a></div>
-                    <div class="paper-meta"><strong>Shi Ding</strong>, Brian Magerko<br> Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE TS), 2026</div>
-                  </li>
-                </ul>
-              </div>
-              <div class="related-publications manuscript">
-                <h4>Journal manuscript under review</h4>
-                <div class="paper-meta"><a href="https://www.nature.com/npjscilearn/" target="_blank" rel="noopener noreferrer"> npj Science of Learning </a> (Nature Portfolio)</div>
-              </div>
-            </div>
-          </article>
+      <section class="highlights" aria-labelledby="highlights-title">
+        <h2 class="section-label" id="highlights-title">Selected highlights</h2>
+        <dl>
+          <div class="highlight-row">
+            <dt>Research award</dt>
+            <dd><a class="award" href="https://dl.acm.org/doi/pdf/10.1145/3773077.3812141" target="_blank" rel="noopener noreferrer">Best Paper Honorable Mention (WIP), ACM IDC 2026</a></dd>
+          </div>
+          <div class="highlight-row">
+            <dt>Research impact</dt>
+            <dd>Work cited in CHI, DIS, and ASSETS papers and in <a href="https://arxiv.org/abs/2611.06830" target="_blank" rel="noopener noreferrer">research</a> coauthored by researchers affiliated with Google Research, Google DeepMind, and Harvard Business School.</dd>
+          </div>
+          <div class="highlight-row">
+            <dt>Evaluation research</dt>
+            <dd>TEACH-AI cited as a source for multiple AI tutor evaluation criteria in <a href="https://aclanthology.org/2026.aimecon-sessions.15/" target="_blank" rel="noopener noreferrer">Xiao et al. (AIME-Con 2026)</a>.</dd>
+          </div>
+        </dl>
+      </section>
+      <details class="full-bio" id="full-bio">
+        <summary>Full Bio <span class="summary-note">Background, collaborations, and service</span></summary>
+        <div class="bio-content" id="about">
+          <h2>About</h2>
+          <p><strong>Shi Ding</strong> is an award-winning researcher at the <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Institute of Technology</a>, where she explores how frontier AI and interactive agentic systems can enhance human learning and strengthen human agency. She is a Ph.D. Candidate in Digital Media at the <a href="https://expressivemachinery.gatech.edu/" target="_blank" rel="noopener noreferrer">Expressive Machinery Lab</a>, advised by Regents’ Professor <a href="https://iac.gatech.edu/people/person/brian-magerko" target="_blank" rel="noopener noreferrer">Brian Magerko</a>. Her research broadly focuses on human–AI interaction, human-centered AI evaluation, and accessible learning technologies.</p>
+          <p>Her honors include a <strong>Best Paper Honorable Mention (WIP) at ACM IDC 2026</strong>, the CRIDC Research Award, and an AI Child Safety Lab Fellowship. Her publications cover human–AI interaction, human-centered AI, accessible computing, and AI literacy, with work appearing at <em>ACM IDC</em>, <em>SIGCSE</em>, <em>ASSETS</em>, and <em>AIED</em>, alongside first-author papers at <em>NeurIPS</em> and <em>ACL</em> workshops.</p>
+          <p>Her work has been cited in CHI, DIS, and ASSETS papers, in journals such as <em>Computers and Education: Artificial Intelligence</em>, and in <a href="https://arxiv.org/abs/2611.06830" target="_blank" rel="noopener noreferrer">research</a> coauthored by researchers affiliated with <strong>Google Research, Google DeepMind, and Harvard Business School</strong>. Her TEACH-AI framework is also cited as a source for multiple AI tutor evaluation criteria in <a href="https://aclanthology.org/2026.aimecon-sessions.15/" target="_blank" rel="noopener noreferrer">Xiao et al. (AIME-Con 2026)</a>.</p>
+          <p>Beyond her core research, she has collaborated with faculty across disciplines at <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Tech</a>, including <a href="https://www.cc.gatech.edu/people/mark-riedl" target="_blank" rel="noopener noreferrer">Mark Riedl</a>, <a href="https://lmc.gatech.edu/people/person/richmond-wong" target="_blank" rel="noopener noreferrer">Richmond Wong</a>, <a href="https://www.cc.gatech.edu/people/christopher-j-maclellan" target="_blank" rel="noopener noreferrer">Chris MacLellan</a>, <a href="https://iac.gatech.edu/people/person/michael-nitsche" target="_blank" rel="noopener noreferrer">Michael Nitsche</a>, and <a href="https://arts.gatech.edu/people/jason-freeman" target="_blank" rel="noopener noreferrer">Jason Freeman</a>.</p>
+          <p>She has presented her research at <a href="https://www.harvard.edu/" target="_blank" rel="noopener noreferrer">Harvard University</a>, <a href="https://www.tudelft.nl/en/" target="_blank" rel="noopener noreferrer">Delft University of Technology</a>, <a href="https://www.ucdavis.edu/" target="_blank" rel="noopener noreferrer">UC Davis</a>, <a href="https://uci.edu/" target="_blank" rel="noopener noreferrer">UC Irvine</a>, and the <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Tech</a> Responsible Computing, AI, &amp; Society Summit.</p>
+          <p>She has served as an Area Chair for ACM DIS, a Session Chair for ACL, and a reviewer for conferences including CHI, DIS, FAccT, AMIA, C&amp;C, NeurIPS, SIGCSE TS, and CogSci.</p>
+          <p>In industry, she previously worked as a Research Scientist at the AI startup Grasply AI. She is also a CREATE-X Fellow and the co-founder of Deeproject.AI, supported by the Quadrant-i Startup Grant, with mentorship from <a href="https://people.research.gatech.edu/richard-gruber" target="_blank" rel="noopener noreferrer">Richard Gruber</a> and <a href="https://quadrant-i.gatech.edu/william-shawn-yeager" target="_blank" rel="noopener noreferrer">William Shawn Yeager</a>.</p>
         </div>
-      </section>
+      </details>
     </main>
+    <footer class="site-footer">
+      <span>Shi Ding · Georgia Institute of Technology</span>
+      <div class="footer-links"><a href="index.html">Home</a><a href="research.html">Research</a><a href="mailto:sding84@gatech.edu">Contact</a></div>
+    </footer>
   </body>
 </html>
