@@ -36,32 +36,18 @@ p { margin: 0 0 18px; }
 .eyebrow { margin: 0 0 15px; color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: 1.25px; text-transform: uppercase; }
 
 /* Home */
-.home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 174px; align-items: start; gap: 64px; padding-block: 74px 54px; }
+.home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 160px; align-items: start; gap: 64px; padding-block: 74px 54px; }
 .home-intro h1 { margin: 0 0 4px; color: var(--heading); font-size: clamp(44px, 5vw, 60px); font-weight: 650; letter-spacing: -2px; line-height: 1.12; }
 .english-name { margin-bottom: 23px; color: var(--muted); font-size: 12px; }
 .short-bio { max-width: 620px; margin: 0 0 20px; color: #354052; font-size: 18px; line-height: 1.75; }
 .affiliation { color: var(--muted); font-size: 14px; }
-.portrait { width: 174px; height: 210px; object-fit: cover; object-position: center; border: 1px solid var(--line); border-radius: 5px; }
+.portrait { width: 160px; height: 160px; object-fit: cover; object-position: center 22%; border: 1px solid var(--line); border-radius: 50%; }
 .research-directions { margin: 24px 0 14px; color: var(--muted); font-size: 12px; line-height: 1.8; }
 .links { color: #b3bac4; font-size: 12px; line-height: 2.3; }
 .links a { display: inline-block; margin-right: 5px; }
 .primary-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 24px; color: var(--heading); font-size: 14px; font-weight: 650; }
 .primary-link::after { content: "\2192"; color: var(--blue); font-size: 19px; transition: transform 0.2s ease; }
 .primary-link:hover::after { transform: translateX(3px); }
-.highlights { border-top: 1px solid var(--line); padding-top: 28px; }
-.section-label { margin: 0 0 22px; color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; }
-.highlight-row { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 30px; padding: 17px 0; border-bottom: 1px solid var(--line); }
-.highlight-row dt { color: var(--muted); font-size: 12px; }
-.highlight-row dd { margin: 0; font-size: 14px; line-height: 1.8; }
-.highlight-row p { margin: 0; }
-.highlight-row .award { color: var(--gold); font-weight: 600; }
-.highlights dl { margin: 0; }
-.full-bio { margin-top: 42px; border-bottom: 1px solid var(--line); }
-.full-bio summary { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px 20px; padding: 18px 0; cursor: pointer; list-style: none; color: var(--heading); font-size: 15px; font-weight: 600; }
-.full-bio summary::-webkit-details-marker { display: none; }
-.full-bio summary::after { content: "+"; margin-left: auto; color: var(--muted); font-size: 19px; font-weight: 400; }
-.full-bio[open] summary::after { content: "\2212"; }
-.summary-note { color: var(--muted); font-size: 12px; font-weight: 400; }
 .bio-content { max-width: 760px; margin: 12px auto 32px; }
 .bio-content h2 { margin: 0 0 20px; color: var(--heading); font-size: 21px; font-weight: 600; }
 .bio-content p { font-size: 15px; line-height: 1.85; }
@@ -109,32 +95,79 @@ p { margin: 0 0 18px; }
   .site-nav { gap: 16px; }
   .site-nav a { font-size: 12px; }
   .home-intro { grid-template-columns: minmax(0, 1fr) 120px; gap: 30px; padding-block: 48px 38px; }
-  .portrait { width: 120px; height: 154px; }
+  .portrait { width: 120px; height: 120px; }
   .short-bio { font-size: 16px; }
   .home-intro h1 { font-size: 46px; }
   .project-card { grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 26px; }
   .page-intro { padding-top: 44px; }
-  .highlight-row { grid-template-columns: 112px minmax(0, 1fr); gap: 20px; }
 }
 @media (max-width: 540px) {
   .site-header { align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding-block: 20px; }
   .site-nav { gap: 24px; }
   .home-intro { grid-template-columns: minmax(0, 1fr); gap: 26px; padding-top: 35px; }
-  .portrait { grid-row: 1; width: 90px; height: 108px; }
+  .portrait { grid-row: 1; width: 96px; height: 96px; }
   .home-intro h1 { font-size: 44px; }
   .short-bio { font-size: 17px; }
   .english-name { margin-bottom: 18px; }
-  .highlight-row { grid-template-columns: minmax(0, 1fr); gap: 4px; padding-block: 19px; }
   .project-card { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 30px; }
   .project-image { max-width: 380px; }
   .project-content h3 { font-size: 22px; }
   .paper-title { font-size: 15px; }
   .paper-meta { font-size: 12px; }
-  .summary-note { flex-basis: 80%; font-size: 11px; }
-  .full-bio summary { position: relative; }
-  .full-bio summary::after { position: absolute; right: 0; top: 15px; }
   .site-footer { margin-top: 44px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+
+
+/* Full-width dark home; Research retains the light theme. */
+body.home {
+  --background: #111827;
+  --text: #d0d9e7;
+  --heading: #f3f4f6;
+  --muted: #a3afc1;
+  --blue: #adcaff;
+  --line: rgba(203, 213, 225, 0.17);
+  --gold: #d3b77a;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+.home .page { flex: 1; }
+.home .short-bio { color: var(--text); }
+.home .links { color: #8190a8; }
+.home .skip-link { background: #1b2940; }
+.home .site-footer { margin-top: 36px; }
+.home-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 34px;
+  margin-top: 26px;
+}
+.home-actions .primary-link { margin-top: 0; }
+.bio-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--heading);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bio-toggle:hover { text-decoration: underline; text-underline-offset: 4px; }
+.bio-toggle:focus-visible { outline: 2px solid var(--blue); outline-offset: 5px; border-radius: 2px; }
+.bio-toggle-icon { color: var(--blue); font-size: 20px; font-weight: 400; }
+[hidden] { display: none !important; }
+.full-bio { padding-top: 32px; margin-bottom: 24px; border-top: 1px solid var(--line); }
+.bio-content { max-width: 760px; margin: 0 auto; }
+@media (max-width: 540px) {
+  .home .site-footer { margin-top: 24px; }
+  .home-actions { gap: 18px 28px; }
 }

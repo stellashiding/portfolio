@@ -5,11 +5,11 @@
     <title>Shi Ding | Human-centered AI Researcher</title>
     <meta name="description" content="Shi Ding is a Ph.D. Candidate at Georgia Tech researching AI agents, human-centered AI, and AI evaluation."> <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="home">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="site-name" href="index.html">Shi Ding</a>
-      <nav class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a> <a href="research.html">Research</a> <a href="https://scholar.google.com/citations?user=aUtxc2gAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">Scholar</a> <a href="mailto:sding84@gatech.edu">Contact</a></nav>
+      <nav class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a> <a href="research.html">Research</a></nav>
     </header>
     <main class="page" id="main">
       <section class="home-intro" aria-labelledby="intro-title">
@@ -21,31 +21,19 @@
           <p class="affiliation"><a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Institute of Technology</a> · <a href="https://expressivemachinery.gatech.edu/" target="_blank" rel="noopener noreferrer">Expressive Machinery Lab</a></p>
           <p class="research-directions">Human-Centered AI · AI Agents · AI literacy & safety ·ML & Data Science</p>
           <div class="links"><a href="https://scholar.google.com/citations?user=aUtxc2gAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener noreferrer">🎓 Scholar</a> · <a href="https://github.com/stellashiding" target="_blank" rel="noopener noreferrer">💻 GitHub</a> · <a href="https://www.linkedin.com/in/shiding/" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a> · <a href="mailto:sding84@gatech.edu">✉️ Email</a> · <a href="https://orcid.org/0009-0005-1509-1966" target="_blank" rel="noopener noreferrer">🆔 ORCID</a></div>
-          <a class="primary-link" href="research.html">View Research</a>
+          <div class="home-actions">
+            <a class="primary-link" href="research.html">View Research</a>
+            <button class="bio-toggle" type="button" aria-expanded="false" aria-controls="full-bio">
+              Full Bio <span class="bio-toggle-icon" aria-hidden="true">+</span>
+            </button>
+          </div>
         </div>
-        <img class="portrait" src="profile.jpg" alt="Portrait of Shi Ding" width="174" height="210" fetchpriority="high">
+        <img class="portrait" src="profile.jpg" alt="Portrait of Shi Ding" width="160" height="160" fetchpriority="high">
       </section>
-      <section class="highlights" aria-labelledby="highlights-title">
-        <h2 class="section-label" id="highlights-title">Selected highlights</h2>
-        <dl>
-          <div class="highlight-row">
-            <dt>Research award</dt>
-            <dd><a class="award" href="https://dl.acm.org/doi/pdf/10.1145/3773077.3812141" target="_blank" rel="noopener noreferrer">Best Paper Honorable Mention (WIP), ACM IDC 2026</a></dd>
-          </div>
-          <div class="highlight-row">
-            <dt>Research impact</dt>
-            <dd>Work cited in CHI, DIS, and ASSETS papers and in <a href="https://arxiv.org/abs/2611.06830" target="_blank" rel="noopener noreferrer">research</a> coauthored by researchers affiliated with Google Research, Google DeepMind, and Harvard Business School.</dd>
-          </div>
-          <div class="highlight-row">
-            <dt>Evaluation research</dt>
-            <dd>TEACH-AI cited as a source for multiple AI tutor evaluation criteria in <a href="https://aclanthology.org/2026.aimecon-sessions.15/" target="_blank" rel="noopener noreferrer">Xiao et al. (AIME-Con 2026)</a>.</dd>
-          </div>
-        </dl>
-      </section>
-      <details class="full-bio" id="full-bio">
-        <summary>Full Bio <span class="summary-note">Background, collaborations, and service</span></summary>
+
+      <section class="full-bio" id="full-bio" aria-labelledby="full-bio-title" hidden>
         <div class="bio-content" id="about">
-          <h2>About</h2>
+          <h2 id="full-bio-title">About</h2>
           <p><strong>Shi Ding</strong> is an award-winning researcher at the <a href="https://www.gatech.edu/" target="_blank" rel="noopener noreferrer">Georgia Institute of Technology</a>, where she explores how frontier AI and interactive agentic systems can enhance human learning and strengthen human agency. She is a Ph.D. Candidate in Digital Media at the <a href="https://expressivemachinery.gatech.edu/" target="_blank" rel="noopener noreferrer">Expressive Machinery Lab</a>, advised by Regents’ Professor <a href="https://iac.gatech.edu/people/person/brian-magerko" target="_blank" rel="noopener noreferrer">Brian Magerko</a>. Her research broadly focuses on human–AI interaction, human-centered AI evaluation, and accessible learning technologies.</p>
           <p>Her honors include a <strong>Best Paper Honorable Mention (WIP) at ACM IDC 2026</strong>, the CRIDC Research Award, and an AI Child Safety Lab Fellowship. Her publications cover human–AI interaction, human-centered AI, accessible computing, and AI literacy, with work appearing at <em>ACM IDC</em>, <em>SIGCSE</em>, <em>ASSETS</em>, and <em>AIED</em>, alongside first-author papers at <em>NeurIPS</em> and <em>ACL</em> workshops.</p>
           <p>Her work has been cited in CHI, DIS, and ASSETS papers, in journals such as <em>Computers and Education: Artificial Intelligence</em>, and in <a href="https://arxiv.org/abs/2611.06830" target="_blank" rel="noopener noreferrer">research</a> coauthored by researchers affiliated with <strong>Google Research, Google DeepMind, and Harvard Business School</strong>. Her TEACH-AI framework is also cited as a source for multiple AI tutor evaluation criteria in <a href="https://aclanthology.org/2026.aimecon-sessions.15/" target="_blank" rel="noopener noreferrer">Xiao et al. (AIME-Con 2026)</a>.</p>
@@ -54,11 +42,26 @@
           <p>She has served as an Area Chair for ACM DIS, a Session Chair for ACL, and a reviewer for conferences including CHI, DIS, FAccT, AMIA, C&amp;C, NeurIPS, SIGCSE TS, and CogSci.</p>
           <p>In industry, she previously worked as a Research Scientist at the AI startup Grasply AI. She is also a CREATE-X Fellow and the co-founder of Deeproject.AI, supported by the Quadrant-i Startup Grant, with mentorship from <a href="https://people.research.gatech.edu/richard-gruber" target="_blank" rel="noopener noreferrer">Richard Gruber</a> and <a href="https://quadrant-i.gatech.edu/william-shawn-yeager" target="_blank" rel="noopener noreferrer">William Shawn Yeager</a>.</p>
         </div>
-      </details>
+      </section>
     </main>
     <footer class="site-footer">
       <span>Shi Ding · Georgia Institute of Technology</span>
-      <div class="footer-links"><a href="index.html">Home</a><a href="research.html">Research</a><a href="mailto:sding84@gatech.edu">Contact</a></div>
+      <div class="footer-links"><a href="index.html">Home</a><a href="research.html">Research</a></div>
     </footer>
+
+    <script>
+      (() => {
+        const toggle = document.querySelector('.bio-toggle');
+        const panel = document.getElementById('full-bio');
+        const icon = toggle.querySelector('.bio-toggle-icon');
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          panel.hidden = expanded;
+          icon.textContent = expanded ? '+' : '−';
+        });
+      })();
+    </script>
   </body>
 </html>
+
