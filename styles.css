@@ -237,8 +237,8 @@ body.home {
 .home { position: relative; isolation: isolate; }
 .architectural-scene {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: url("assets/architectural-space.svg") center top / cover no-repeat;
-  opacity: .72;
+  background: url("assets/spatial-wireframe-city.svg") center top / cover no-repeat;
+  opacity: .76;
 }
 .home .site-header { background: transparent; }
 .home .site-header::before {
@@ -278,4 +278,17 @@ body.home {
 @media (prefers-reduced-motion: reduce) {
   .bio-motion .title-letter { animation: none; }
   .bio-motion .bio-content p.reveal-pending { opacity: 1; transform: none; }
+}
+
+/* Full research positioning and affiliation, balanced across viewport widths. */
+.cover .eyebrow {
+  max-width: 760px; margin-inline: auto; font-size: 11px;
+  letter-spacing: 1.2px; text-transform: none; line-height: 1.9;
+  text-wrap: balance;
+}
+.role-separator { padding-inline: 2px; }
+@media (max-width: 540px) {
+  .cover .eyebrow { max-width: 330px; font-size: 10px; letter-spacing: .5px; }
+  .cover-role a { display: block; }
+  .cover-role .role-separator { display: none; }
 }
