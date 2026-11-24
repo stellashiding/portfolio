@@ -294,3 +294,29 @@ body.home {
 }
 
 .cover-affiliation a { color: inherit; }
+
+/* Keep navigation geometry identical across Home, Bio, and Research. */
+html { scrollbar-gutter: stable; }
+.site-header, .home .site-header {
+  width: min(1120px, calc(100% - 80px));
+  min-height: 80px; padding-block: 0;
+  flex-direction: row; align-items: center; justify-content: flex-end;
+}
+.site-nav {
+  display: grid; grid-template-columns: 56px 40px 76px;
+  column-gap: 18px; row-gap: 0;
+}
+.site-nav a, .site-nav a[aria-current="page"] {
+  justify-content: center; font-size: 14px; font-weight: 500;
+}
+@media (max-width: 720px) {
+  .site-header, .home .site-header { width: calc(100% - 40px); }
+}
+@media (max-width: 540px) {
+  .site-header, .home .site-header { min-height: 72px; padding-block: 0; }
+  .site-nav { column-gap: 12px; }
+  .site-nav a, .site-nav a[aria-current="page"] { font-size: 13px; }
+}
+@media (max-width: 359px) {
+  .site-header, .home .site-header { width: calc(100% - 32px); }
+}
