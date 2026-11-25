@@ -144,17 +144,17 @@ body.home {
 }
 .home .site-header, .cover-page { width: min(1120px, calc(100% - 80px)); }
 .home .skip-link { background: var(--background); }
-.cover { padding: 36px 0 28px; text-align: center; }
+.cover { padding: 56px 0 48px; text-align: center; }
 .cover-heading { position: relative; }
 .cover .eyebrow { font-size: 10px; letter-spacing: 2.4px; margin-bottom: 12px; }
 .cover-title {
-  color: var(--heading); font-size: clamp(72px, 15.4vw, 184px);
-  font-weight: 650; line-height: 0.95; letter-spacing: -0.065em;
+  color: var(--heading); font-size: 60px;
+  font-weight: 500; line-height: 1.15; letter-spacing: -0.03em;
   margin: 0; white-space: nowrap;
 }
 .cover-alias { color: var(--muted); font-size: 13px; margin: 12px 0 22px; letter-spacing: 2px; }
 .cover-portrait {
-  width: 190px; aspect-ratio: 4 / 5; margin: 0 auto 22px;
+  width: 160px; aspect-ratio: 4 / 5; margin: 0 auto 22px;
   border: 1px solid #484847; background: #d3d3d3;
 }
 .cover-portrait img {
@@ -203,7 +203,7 @@ body.home {
 @media (max-width: 720px) {
   .home .site-header, .cover-page { width: calc(100% - 40px); }
   .cover { padding-top: 32px; }
-  .cover-portrait { width: 174px; }
+  .cover-portrait { width: 160px; }
 }
 @media (max-width: 540px) {
   .site-header { flex-direction: row; align-items: center; justify-content: space-between; min-height: 72px; padding-block: 10px; gap: 12px; }
@@ -212,9 +212,9 @@ body.home {
   .site-name { font-size: 16px; white-space: nowrap; }
   .cover { padding-top: 36px; }
   .cover .eyebrow { font-size: 9px; letter-spacing: 1.3px; margin-bottom: 17px; }
-  .cover-title { font-size: clamp(60px, 17.5vw, 94px); }
+  .cover-title { font-size: 40px; }
   .cover-alias { margin: 12px 0 22px; font-size: 12px; }
-  .cover-portrait { width: 166px; margin-bottom: 22px; }
+  .cover-portrait { width: 144px; margin-bottom: 22px; }
   .cover-role { font-size: 14px; }
   .cover-affiliation { font-size: 14px; }
   .cover-description { font-size: 14px; margin-top: 22px; line-height: 1.85; }
@@ -238,7 +238,7 @@ body.home {
 .architectural-scene {
   position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: url("assets/spatial-wireframe-city.svg") center top / cover no-repeat;
-  opacity: .76;
+  opacity: .32;
 }
 .home .site-header { background: transparent; }
 .home .site-header::before {
@@ -247,7 +247,7 @@ body.home {
   background: rgba(17, 17, 17, .95);
 }
 .cover-portrait {
-  width: 190px; height: 190px; aspect-ratio: 1;
+  width: 160px; height: 160px; aspect-ratio: 1;
   overflow: hidden; border-radius: 50%; border: 1px solid #555551;
 }
 .cover-portrait img { object-position: center 22%; }
@@ -266,14 +266,14 @@ body.home {
   to { opacity: 1; transform: translateY(0); }
 }
 @media (max-width: 720px) {
-  .architectural-scene { opacity: .45; background-size: auto 1050px; }
-  .cover-portrait { width: 174px; height: 174px; }
+  .architectural-scene { opacity: .24; background-size: auto 1050px; }
+  .cover-portrait { width: 160px; height: 160px; }
   .home .site-header::before { inset-inline: -20px; }
 }
 @media (max-width: 540px) {
   .site-header { justify-content: flex-end; }
-  .cover-portrait { width: 166px; height: 166px; }
-  .architectural-scene { opacity: .3; background-size: auto 950px; }
+  .cover-portrait { width: 144px; height: 144px; }
+  .architectural-scene { opacity: .16; background-size: auto 950px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .bio-motion .title-letter { animation: none; }
@@ -319,4 +319,13 @@ html { scrollbar-gutter: stable; }
 }
 @media (max-width: 359px) {
   .site-header, .home .site-header { width: calc(100% - 32px); }
+}
+
+/* A restrained researcher introduction rather than a poster-sized name. */
+.cover-heading { margin-bottom: 28px; }
+.cover-alias { margin: 8px 0 12px; }
+.cover-heading .eyebrow { margin: 0 auto; }
+@media (max-width: 540px) {
+  .cover-heading { margin-bottom: 24px; }
+  .cover-alias { margin: 7px 0 12px; }
 }
